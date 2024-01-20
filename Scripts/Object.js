@@ -69,3 +69,6 @@ console.log(numbers2);
 
 let num=[1,2,[1,2],[3,4],[5,6,[1,2]]];
 console.log(num.flat(Infinity));
+
+
+
