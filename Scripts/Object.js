@@ -71,4 +71,24 @@ let num=[1,2,[1,2],[3,4],[5,6,[1,2]]];
 console.log(num.flat(Infinity));
 
 
+let object12={
+    a:1,
+    b:2,
+    c:{
+        a:4
+    }
+}
+
+let ShallowObj={...object12};
+ShallowObj.a=18   //this will only change the shallow object not the original object
+ShallowObj.c.a="hii this is abraar"  //this is called shallow cloneing if we chnage innner object in shallow obj it will also chnage the original object
+console.log(object12)
+console.log(ShallowObj);   
+
+
+let DeepObj=JSON.parse( JSON.stringify(object12))  // In this if we do deep cloning and do the changes in the deepobj inner object it will only chnage the deepobj not the original object
+DeepObj.c.a="hii this is abbu";
+console.log(DeepObj);  
+
+
 
