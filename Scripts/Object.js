@@ -1,6 +1,8 @@
 // we can access the object keys value and both using below code 
 
 
+
+
 let obj={
     a:1,
     b:2,
@@ -91,6 +93,31 @@ DeepObj.c.a="hii this is abbu";
 console.log(DeepObj);  
 
 
+
+let spread=[{
+    id:1,
+    name:"abraar"
+},
+{
+id:2,
+name:"john"
+},
+{
+    id:3,
+    name:"Abe"
+}
+
+]
+
+
+let spreadFunc = (obj) => {
+    let result = obj.reduce((prev, curr) => {
+      return [...prev, curr.name]; // Spread an array containing curr.name
+    }, []);
+    return result; // Return the result of the reduce operation
+  }
+
+console.log(spreadFunc(spread));
 
 
 
