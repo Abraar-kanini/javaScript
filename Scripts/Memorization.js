@@ -9,4 +9,5 @@ return result;
 }
 
 console.log(memo(6));
+console.log(memo(5));
 console.log(storeNum)
